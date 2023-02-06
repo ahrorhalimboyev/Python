@@ -10,9 +10,6 @@ class Window(QWidget):
         self.setWindowTitle("Application")
         self.setGeometry(200,200,500,500)
         self.start()
-    def font(self,obj,x,y):
-        obj.setFont(QFont("Times",24))
-        obj.move(x,y)
     def start(self):
         ok=QPushButton("OK",self)
         self.font(ok,50,50)
@@ -44,6 +41,9 @@ class Window(QWidget):
         miniwindow.setIcon(QMessageBox.Question)
         miniwindow.setIcon(QMessageBox.Information)
         miniwindow.show()
+    def font(self,obj,x,y):
+        obj.setFont(QFont("Times",24))
+        obj.move(x,y)
 oyna=Window()
 oyna.show()
 app.exec_()
